@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram name="DFD Level 1" id="DFD_Level_1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SkillSwap – DFD Level 1" style="text;html=1;align=center;fontSize=24;fontStyle=1;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="300" y="20" width="550" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="guest" value="Guest / User" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="40" y="100" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="Admin" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="40" y="570" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" value="1.0&#10;Manage Accounts &amp; Profiles" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="250" y="100" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="2.0&#10;Manage Skills &amp; Search" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="500" y="100" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="3.0&#10;Manage Exchange Requests" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="750" y="100" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" value="4.0&#10;Manage Sessions &amp; Reviews" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="750" y="350" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" value="5.0&#10;Admin &amp; Notifications" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="500" y="570" width="190" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="D1 Users" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="250" y="300" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="D2 Skills / UserSkills" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="500" y="300" width="190" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="D3 ExchangeRequests" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="990" y="100" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d4" value="D4 Sessions / Reviews" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="990" y="350" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="d5" value="D5 Notifications" style="shape=partialRectangle;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="750" y="570" width="170" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" value="Credentials / profile data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="guest" target="p1">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="User records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p1" target="d1">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="User data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="d1" target="p1">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" value="Search / skill input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="guest" target="p2">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" value="Skill records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p2" target="d2">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" value="Skill data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="d2" target="p2">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" value="Matched users / skills" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p2" target="p3">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" value="Exchange request" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="guest" target="p3">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" value="Request record" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p3" target="d3">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f10" value="Request status" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="d3" target="p3">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11" value="Accepted request" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p3" target="p4">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12" value="Session / review data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p4" target="d4">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f13" value="Session details" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="d4" target="p4">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f14" value="Schedule / review input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="guest" target="p4">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f15" value="Admin actions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="admin" target="p5">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f16" value="Account updates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p5" target="d1">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f17" value="Skill moderation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p5" target="d2">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f18" value="Notification records" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p5" target="d5">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f19" value="Notification data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="d5" target="p5">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f20" value="Notifications / updates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontSize=12;" vertex="1" edge="1" parent="1" source="p5" target="guest">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

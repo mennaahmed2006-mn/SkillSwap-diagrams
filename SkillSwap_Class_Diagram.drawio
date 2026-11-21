@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram name="Class Diagram" id="Class_Diagram">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SkillSwap – Class Diagram" style="text;html=1;align=center;fontSize=24;fontStyle=1;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="300" y="10" width="550" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="&lt;b&gt;User&lt;/b&gt;&lt;hr&gt;userId: int&#10;name: string&#10;email: string&#10;passwordHash: string&#10;role: string&lt;hr&gt;&lt;i&gt;register()&#10;login()&#10;updateProfile()&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="60" y="90" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="&lt;b&gt;Skill&lt;/b&gt;&lt;hr&gt;skillId: int&#10;name: string&#10;categoryId: int&lt;hr&gt;&lt;i&gt;create()&#10;update()&#10;delete()&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="380" y="90" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="&lt;b&gt;Category&lt;/b&gt;&lt;hr&gt;categoryId: int&#10;name: string&lt;hr&gt;&lt;i&gt;addCategory()&#10;updateCategory()&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="700" y="90" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="&lt;b&gt;UserSkill&lt;/b&gt;&lt;hr&gt;userSkillId: int&#10;userId: int&#10;skillId: int&#10;type: enum&#10;level: string&lt;hr&gt;&lt;i&gt;addSkill()&#10;removeSkill()&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="60" y="350" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="&lt;b&gt;ExchangeRequest&lt;/b&gt;&lt;hr&gt;requestId: int&#10;senderId: int&#10;receiverId: int&#10;offeredSkillId: int&#10;requestedSkillId: int&#10;status: enum&lt;hr&gt;&lt;i&gt;send()&#10;accept()&#10;reject()&#10;cancel()&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="380" y="350" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="&lt;b&gt;Session&lt;/b&gt;&lt;hr&gt;sessionId: int&#10;requestId: int&#10;dateTime: datetime&#10;status: enum&lt;hr&gt;&lt;i&gt;schedule()&#10;reschedule()&#10;complete()&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="700" y="350" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" value="&lt;b&gt;Review&lt;/b&gt;&lt;hr&gt;reviewId: int&#10;sessionId: int&#10;reviewerId: int&#10;revieweeId: int&#10;rating: int&#10;comment: string&lt;hr&gt;&lt;i&gt;submitReview()&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="60" y="610" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" value="&lt;b&gt;Notification&lt;/b&gt;&lt;hr&gt;notificationId: int&#10;userId: int&#10;message: string&#10;isRead: bool&lt;hr&gt;&lt;i&gt;create()&#10;markRead()&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;verticalAlign=top;spacing=8;" vertex="1" edge="0" parent="1">
+          <mxGeometry x="700" y="610" width="230" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="User skills" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontSize=11;" vertex="1" edge="1" parent="1" source="c1" target="c4">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="Skill links" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontSize=11;" vertex="1" edge="1" parent="1" source="c2" target="c4">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="Categories" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontSize=11;" vertex="1" edge="1" parent="1" source="c3" target="c2">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="Sends" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontSize=11;" vertex="1" edge="1" parent="1" source="c1" target="c5">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="Receives" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontSize=11;" vertex="1" edge="1" parent="1" source="c1" target="c5">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" value="Schedules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontSize=11;" vertex="1" edge="1" parent="1" source="c5" target="c6">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" value="Has review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontSize=11;" vertex="1" edge="1" parent="1" source="c6" target="c7">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r8" value="Receives" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#6c8ebf;fontSize=11;" vertex="1" edge="1" parent="1" source="c1" target="c8">
+          <mxGeometry x="0" y="0" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
